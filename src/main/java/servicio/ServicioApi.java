@@ -22,7 +22,7 @@ public class ServicioApi {
     
     private static final String API_URL = "https://pokeapi.co/api/v2/pokemon/";
     
-    public Criatura getPost(String nombre) throws IOException, InterruptedException{
+    public Criatura getPokemon (String nombre) throws IOException, InterruptedException{
     HttpRequest request = HttpRequest.newBuilder()
                           .GET()
                           .uri(URI.create(API_URL +nombre.toLowerCase()))
