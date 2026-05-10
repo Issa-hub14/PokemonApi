@@ -30,7 +30,7 @@ public class ControladorPokemon {
 
     public void iniciarEventos() {
         vista.getBtnBuscar().addActionListener(e -> {
-            String nombre = vista.getTxtPokemon().getText();
+            String nombre = vista.getTxtPokemon().getText().trim();
             try {
                 Criatura pokemon
                         = api.getPokemon(nombre);
