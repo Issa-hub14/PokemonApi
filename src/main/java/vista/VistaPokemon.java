@@ -15,6 +15,7 @@ public class VistaPokemon extends javax.swing.JFrame {
      */
     public VistaPokemon() {
         initComponents();
+        setSize(640,500);
         setLocationRelativeTo(null);
     }
      public javax.swing.JButton getBtnBuscar() {
@@ -48,6 +49,10 @@ public class VistaPokemon extends javax.swing.JFrame {
     public javax.swing.JLabel getLblEstado() {
         return lblEstado;
     }
+    
+    public javax.swing.JLabel getLblAltura() {
+        return lblAltura;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,6 +84,7 @@ public class VistaPokemon extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(633, 400));
 
         jPanel1.setBackground(new java.awt.Color(246, 246, 210));
+        jPanel1.setPreferredSize(new java.awt.Dimension(633, 500));
 
         jPanel2.setBackground(new java.awt.Color(49, 120, 192));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -267,7 +273,7 @@ public class VistaPokemon extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
         );
 
         pack();

@@ -36,6 +36,7 @@ public class ControladorPokemon {
                         = api.getPokemon(nombre);
                 vista.getLblNombre().setText(pokemon.getNombre());
                 vista.getLblPeso().setText(String.valueOf(pokemon.getPeso()));
+                vista.getLblAltura().setText(String.valueOf(pokemon.getAltura()));
                 vista.getLblOrden().setText(String.valueOf(pokemon.getOrden()));
                 vista.getLblHabilidad().setText(pokemon.getPoderes());
 
