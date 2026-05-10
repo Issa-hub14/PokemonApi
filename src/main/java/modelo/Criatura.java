@@ -17,11 +17,13 @@ public class Criatura {
     private String nombre;
     private String poderes;
     private String imagen;
+    private int altura;
 
     public Criatura(JSONObject json) {
         this.peso = json.getInt("weight");
         this.orden = json.getInt("order");
         this.nombre = json.getString("name");
+        this.altura = json.getInt("height");
 
         this.poderes = json.getJSONArray("abilities")
                 .getJSONObject(0)
@@ -70,6 +72,15 @@ public class Criatura {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+    
 
     @Override
     public String toString() {
