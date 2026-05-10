@@ -25,10 +25,16 @@ public class Criatura {
         this.nombre = json.getString("name");
         this.altura = json.getInt("height");
 
-        this.poderes = json.getJSONArray("abilities")
-                .getJSONObject(0)
-                .getJSONObject("ability")
-                .getString("name");
+        String habilidades = "";
+        for (int i = 0; i < json.getJSONArray("abilities").length(); i++) {
+            String habilidad = json.getJSONArray("abilities")
+                    .getJSONObject(i)
+                    .getJSONObject("ability")
+                    .getString("name");
+            habilidades += habilidad + "\n";
+        }
+
+        this.poderes = habilidades;
         this.imagen = json.getJSONObject("sprites")
                 .getString("front_default");
     }
@@ -80,7 +86,6 @@ public class Criatura {
     public void setAltura(int altura) {
         this.altura = altura;
     }
-    
 
     @Override
     public String toString() {

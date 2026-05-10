@@ -38,7 +38,7 @@ public class ControladorPokemon {
                 vista.getLblPeso().setText(String.valueOf(pokemon.getPeso()));
                 vista.getLblAltura().setText(String.valueOf(pokemon.getAltura()));
                 vista.getLblOrden().setText(String.valueOf(pokemon.getOrden()));
-                vista.getLblHabilidad().setText(pokemon.getPoderes());
+                vista.getTxtHabilidades().setText(pokemon.getPoderes());
 
                 ImageIcon icono = new ImageIcon(new URL(pokemon.getImagen()));
                 Image img = icono.getImage().getScaledInstance(200,200,Image.SCALE_SMOOTH);
